@@ -1,0 +1,11 @@
+{
+  "run": "main_v3",
+  "tests": 1051,
+  "project_groups": 127,
+  "metrics_recalculated_without_sklearn": true,
+  "all_saved_splits_disjoint": true,
+  "all_samples_evaluated_once": true,
+  "repeat_run": "main_v3_repeat",
+  "predictions_byte_identical": true,
+  "vocabulary_and_coefficient_hashes_equal": true
+}

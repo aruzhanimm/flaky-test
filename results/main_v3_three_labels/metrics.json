@@ -1,0 +1,312 @@
+{
+  "run": "main_v3_three_labels",
+  "pilot": false,
+  "labels": [
+    "ID",
+    "OD",
+    "TD"
+  ],
+  "tests": 930,
+  "project_groups": 127,
+  "category_project_groups": {
+    "ID": 118,
+    "OD": 8,
+    "TD": 6
+  },
+  "metrics": {
+    "original": {
+      "pooled_macro_f1": 0.43588436058864194,
+      "accuracy": 0.8225806451612904,
+      "mean_project_macro_f1": 0.9058975569028289,
+      "classification_report": {
+        "ID": {
+          "precision": 0.8757467144563919,
+          "recall": 0.9231738035264484,
+          "f1-score": 0.8988350705088902,
+          "support": 794.0
+        },
+        "OD": {
+          "precision": 0.8157894736842105,
+          "recall": 0.24603174603174602,
+          "f1-score": 0.3780487804878049,
+          "support": 126.0
+        },
+        "TD": {
+          "precision": 0.01818181818181818,
+          "recall": 0.1,
+          "f1-score": 0.03076923076923077,
+          "support": 10.0
+        },
+        "accuracy": 0.8225806451612904,
+        "macro avg": {
+          "precision": 0.5699060021074734,
+          "recall": 0.42306851651939814,
+          "f1-score": 0.43588436058864194,
+          "support": 930.0
+        },
+        "weighted avg": {
+          "precision": 0.8584023474671008,
+          "recall": 0.8225806451612904,
+          "f1-score": 0.8189428867023811,
+          "support": 930.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          733,
+          7,
+          54
+        ],
+        [
+          95,
+          31,
+          0
+        ],
+        [
+          9,
+          0,
+          1
+        ]
+      ]
+    },
+    "masked": {
+      "pooled_macro_f1": 0.4326002794469908,
+      "accuracy": 0.8129032258064516,
+      "mean_project_macro_f1": 0.8871656078559192,
+      "classification_report": {
+        "ID": {
+          "precision": 0.8743961352657005,
+          "recall": 0.9118387909319899,
+          "f1-score": 0.8927250308261405,
+          "support": 794.0
+        },
+        "OD": {
+          "precision": 0.8157894736842105,
+          "recall": 0.24603174603174602,
+          "f1-score": 0.3780487804878049,
+          "support": 126.0
+        },
+        "TD": {
+          "precision": 0.015625,
+          "recall": 0.1,
+          "f1-score": 0.02702702702702703,
+          "support": 10.0
+        },
+        "accuracy": 0.8129032258064516,
+        "macro avg": {
+          "precision": 0.568603536316637,
+          "recall": 0.419290178987912,
+          "f1-score": 0.4326002794469908,
+          "support": 930.0
+        },
+        "weighted avg": {
+          "precision": 0.8572217796614804,
+          "recall": 0.8129032258064516,
+          "f1-score": 0.8136861194491283,
+          "support": 930.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          724,
+          7,
+          63
+        ],
+        [
+          95,
+          31,
+          0
+        ],
+        [
+          9,
+          0,
+          1
+        ]
+      ]
+    },
+    "majority": {
+      "pooled_macro_f1": 0.30703789636504253,
+      "accuracy": 0.853763440860215,
+      "mean_project_macro_f1": 0.89876000769566,
+      "classification_report": {
+        "ID": {
+          "precision": 0.853763440860215,
+          "recall": 1.0,
+          "f1-score": 0.9211136890951276,
+          "support": 794.0
+        },
+        "OD": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 126.0
+        },
+        "TD": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "accuracy": 0.853763440860215,
+        "macro avg": {
+          "precision": 0.2845878136200717,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.30703789636504253,
+          "support": 930.0
+        },
+        "weighted avg": {
+          "precision": 0.7289120129494739,
+          "recall": 0.853763440860215,
+          "f1-score": 0.7864131926253024,
+          "support": 930.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          794,
+          0,
+          0
+        ],
+        [
+          126,
+          0,
+          0
+        ],
+        [
+          10,
+          0,
+          0
+        ]
+      ]
+    },
+    "source_format": {
+      "pooled_macro_f1": 0.6539440203562341,
+      "accuracy": 0.989247311827957,
+      "mean_project_macro_f1": 0.9606299212598425,
+      "classification_report": {
+        "ID": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 794.0
+        },
+        "OD": {
+          "precision": 0.9264705882352942,
+          "recall": 1.0,
+          "f1-score": 0.9618320610687023,
+          "support": 126.0
+        },
+        "TD": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 10.0
+        },
+        "accuracy": 0.989247311827957,
+        "macro avg": {
+          "precision": 0.6421568627450981,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6539440203562341,
+          "support": 930.0
+        },
+        "weighted avg": {
+          "precision": 0.9792852624920936,
+          "recall": 0.989247311827957,
+          "f1-score": 0.9840761717146843,
+          "support": 930.0
+        }
+      },
+      "confusion_matrix": [
+        [
+          794,
+          0,
+          0
+        ],
+        [
+          0,
+          126,
+          0
+        ],
+        [
+          0,
+          10,
+          0
+        ]
+      ]
+    }
+  },
+  "paired_delta_mean": -0.018731949046909675,
+  "paired_delta_median": 0.0,
+  "conditional_project_bootstrap_95": [
+    -0.04347885568358009,
+    -0.0011248593925759283
+  ],
+  "bootstrap_caution": "Descriptive conditional interval; overlapping training folds and limited rare-category projects restrict inference. No p-value or causal conclusion.",
+  "pooled_macro_f1_delta": -0.0032840811416511295,
+  "changed_predictions": 9,
+  "changed_wrong_to_right": 0,
+  "changed_right_to_wrong": 9,
+  "changed_wrong_to_different_wrong": 0,
+  "seconds": 60.24830629999997,
+  "corpus_sha256": "4fbee74d76717535e80f7c40841852784a23c1907954e8227ad2ae31f87c5127",
+  "predictions_sha256": "2c0bfe30ff608148482cf6c7ec3eb2498977f817821a0ea3ab10188eeb42e422",
+  "config_sha256": "31e7bee91bd23eb569ed19129c685cfcf4b181a0e96bea390d87940f1d270c05",
+  "config_path": "config_model_v3.json",
+  "protocol_sha256": "8ec89415754eda52199442e2666379196feff404fa747c86a0df14d5d072175d",
+  "protocol_path": "protocol_v3_RU.txt",
+  "code_sha256": {
+    "amend_parser_v3.py": "8e0d2a8cdcaf18f27f7dca54e299d3b5861b9dccd9f2391c4e6103e8ea1a64da",
+    "analyze_errors.py": "8abb61211019cb304391e8cc1b2d5b97c1d0a8e750b17f7264406e94b9ff4719",
+    "audit_log_sample.py": "51a1ff53a0d2f487cceede722a02a5270181fbe5f40501bd0182f843ab847389",
+    "audit_metadata.py": "531c456ad8f146f8f8c3b176b99be51e0971c4582952fee0013743e41c46a777",
+    "audit_outcome_tables.py": "78b2f98431965097354400104c57cc519f136a4c487dd15e4bbe983696913c91",
+    "audit_repositories.py": "6f62af7ab772739dee026ad80c8a227fe4a8e5b494537518f670ec0f8339a38c",
+    "build_reports.py": "96bba8d417dc535ae9da8175480a9575034b84b29263ed477f8926f914f8dd30",
+    "closeout.py": "1262f16194de6a9ae809c0f7c04240fff83c61d2b1b4440a7654b2030fbcee90",
+    "collect_failure_corpus.py": "147fb709cfa947458f36bae0a4f31839fedbe0b1e29776403b5bef0f364bcc25",
+    "collect_run_tables.py": "e0cd0c0b1fc2e6635bfd6afc056b7e0afbd15c6329b2ef2ab2fe7e7574875a6e",
+    "download_full_results.py": "3d7ff960ed3583ad2e790a76a9f28862970a97dbb7516aca189ed7d8ba75e751",
+    "evaluate.py": "8f5a632438517ed1c007832b01348b822fc4f18528c92e5e9a5a66d6710c5346",
+    "fetch_log_sample.py": "586bfd7b775917996a91183096f0edf1c93ed5b2435162b87cb8c71fd806f0fa",
+    "fetch_public.py": "7f3b96dd014ab966c0b7bf51ccdff661cdb8138e05bd99c40cb3a7ac2e3ac0b8",
+    "finalize_a4_content.py": "857f31779f7cd1fdefedccd2a6a0cb5ac05ff02b2e36fae3305ff6ee3c8320a2",
+    "freeze_protocol_v2.py": "26728a1d250723a5db0ce95b82afe44e6afd5e8bb939c45bff1d223f3552c76f",
+    "index_candidates.py": "175d37a24cbb2f3d639b0f893f738432930b7bc6b2626dfe71e8840d43c8c2c7",
+    "index_full_archive.py": "bf68137ffd225f8d3436cf4bf9cdb514cfb47f7758ba0d6226c068775fdc4184",
+    "ingest_handoff.py": "8ec17ed33ae28c614662abf2ebc5523e3d531dcce621fba148166547f30211d1",
+    "inspect_archive_index.py": "88cfe5932f19d1906bd3e97c7d77955f22557142a692094c4d1891e7c0ae1265",
+    "package_delivery.py": "87fd5d6064dcc40edb957f080cfd2039a7f7e6fd0c19198011e2c1138182171c",
+    "parse_failure.py": "9cbad255d64a00600d15e02daed8e4a79bde7b2c832353b0dd4b356ea8c5f968",
+    "plot_results.py": "ab54224ecc6520e229bf76044292c7684bdcb873c3e11372d499662dac8ce3da",
+    "prepare_corpus.py": "38f06d875bf22b907c616178c5c12136bb4813ce40036af6aee15313c74091cb",
+    "publish_reports.py": "302a5c63d0d2d32bae92f228bcfa0e72a874ed7ef7fad5711e8f5b08060ba4b3",
+    "record_delivery_checks.py": "973380e0906f159670218221b18539828aaebe1c65965ab7d8fd8aafcf961d38",
+    "remote_zip.py": "fad94b57874c3ac1b58b365a4e7e5d0bc2ea5fb225f19010ef14495b7e191a9c",
+    "reparse_local_failures.py": "8392b65c5e34d955ba7b697e038e8ad63252322034998bc4de9aa7543932583f",
+    "representations.py": "29ccb489daf270c6d10c18d3c51a33f5435364ca2fccc9189cb0886d4bdfbffe",
+    "run_final_analysis.py": "12f540e2839b424ec50098dd374eb6fedcb5dfe310f9382d35035fd1761b675c",
+    "sync_active_config.py": "1fb00847830eafcc8da07d83acaf652f78a16ad74db57f6406fd2f950e5f08e0",
+    "test_junit5_signature.py": "0549ed8eb1a87cc4def8be07a4a4ba8c0efebf58d078349072baac3aae531324",
+    "test_parse_failure.py": "5484cdb903cae579451251be0fb5346eeb9ea6da7f683b026a5635f4747615ed",
+    "test_representations.py": "eca4b524af522dcf32db76e190796f6851f5ba1773689ccf23f3b5aa1ea58ae5",
+    "validate_results.py": "1bcffd20b042ecedc6f00115ccc70672fbcb246cacd7d3996609eb136f2bc2f7",
+    "verify_corpus.py": "960bb36119bacf485993eb3fa3628feb78ed7e5fdfc0d3c763162e322ce254db"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26300-SP0",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "completed_utc": "2026-10-13T12:47:54.573188+00:00",
+  "checks": {
+    "project_disjoint": true,
+    "each_test_evaluated_once": true,
+    "paired_sample_ids_equal": true,
+    "all_training_folds_contain_all_labels": true,
+    "fresh_pipeline_per_fold_condition": true,
+    "tfidf_fit_on_training_only": true,
+    "convergence_warnings": 0
+  }
+}

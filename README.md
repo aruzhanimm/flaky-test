@@ -25,7 +25,7 @@ The experiment measures sensitivity to a defined text transformation. It does no
 
 ## Dataset
 
-The corpus is derived from **ReproFlake** metadata and archived execution results. The bundled snapshot contains the exact retained texts, provenance, exclusions and reference predictions. It can be restored without downloading the original multi-gigabyte archives.
+The corpus is derived from **ReproFlake** metadata and archived execution results. The public repository contains code, aggregate results and figures. Research logs and the compressed data snapshot are distributed separately and are not committed here. The code uses the exact retained texts, provenance, exclusions and reference predictions from the original research workspace.
 
 ```mermaid
 flowchart LR
@@ -49,7 +49,7 @@ Repository counts overlap across categories. Of the 121 NIO tests, 116 come from
 
 **Selection:** 25 records have no failure in the outcome table, 23 have no confirmed target diagnostic, 9 are unclassified, 6 lack a valid revision, and 1 has unresolved revision attribution. A failure mentioned in metadata alone is insufficient for inclusion.
 
-[Data schema and provenance](docs/DATA.md) · [Machine-readable snapshot manifest](artifacts/manifest.json) · [Data attribution](THIRD_PARTY.md)
+[Data schema and provenance](docs/DATA.md) · [Reference snapshot checksums](artifacts/manifest.json) · [Data attribution](THIRD_PARTY.md)
 
 ## Experiment
 
@@ -163,20 +163,24 @@ These analyses were specified after reviewing the main results and use the same 
 
 Use **Python 3.12**. Commands below are run from the repository root.
 
-### 1. Restore and audit the reference snapshot
-
-No third-party Python packages are needed for this step.
+### 1. Supply the research data locally
 
 ```bash
 git clone https://github.com/aruzhanimm/flacky-test.git
 cd flacky-test
-python scripts/restore_artifacts.py
+```
+
+The public repository intentionally omits raw logs and the compressed research snapshot. Copy the `data/` directory and the four reference result directories from the existing research workspace into this checkout. See [required inputs](docs/REPRODUCIBILITY.md#required-local-inputs) for their exact paths. If you already have the separate reference archive, place it at `artifacts/research-snapshot.tar.xz` and run `python scripts/restore_artifacts.py`; the script checks every file against the manifest.
+
+With the data in place, audit the saved results without third-party packages:
+
+```bash
 python scripts/validate_results.py main_v3 --repeat main_v3_repeat
 python scripts/validate_results.py main_v3_three_labels
 python scripts/validate_extension_v4.py extension_v4
 ```
 
-The restore script verifies the archive and all 95 file checksums before writing, preserves existing identical files and refuses to overwrite different contents. The validators independently recompute scores from saved predictions and check project separation. Validation is read-only by default; pass `--write-checks` to save a new `independent_checks.json`.
+Validation is read-only by default; pass `--write-checks` to save a new `independent_checks.json`.
 
 ### 2. Install dependencies, run tests and demonstrate one fold
 
@@ -190,7 +194,7 @@ python -m unittest discover -s scripts -p "test_*.py" -v
 python scripts/defence_demo.py
 ```
 
-The demo holds out ActiveMQ, trains on 1,005 tests and evaluates the selected ID test from the 46-test held-out group. Its expected predictions are **ID with original text** and **TD with masked text**. It asserts corpus integrity, project separation and agreement with the reference predictions. It also reports whether coefficient bytes match the recorded Windows run.
+Tests that need real diagnostic fixtures are explicitly skipped if those local data files are absent. The demo and full experiments require the research data. The demo holds out ActiveMQ, trains on 1,005 tests and evaluates the selected ID test from the 46-test held-out group. Its expected predictions are **ID with original text** and **TD with masked text**. It asserts corpus integrity, project separation and agreement with the reference predictions. It also reports whether coefficient bytes match the recorded Windows run.
 
 ### 3. Re-run the full experiment
 
@@ -221,13 +225,13 @@ flacky-test/
 ├── protocol_extension_v4_RU.txt     Disclosed exploratory extension protocol
 ├── requirements-analysis.txt       Recorded package versions
 ├── scripts/                        Extraction, masking, evaluation, audits and tests
-├── artifacts/                      Compressed snapshot and SHA-256 manifest
-├── data/README.md                  Data restoration entry point
+├── artifacts/                      Reference SHA-256 manifest; data archive excluded
+├── data/README.md                  Instructions for separately supplied local data
 ├── results/                        Browsable reference metrics; full evidence restored here
 ├── docs/                           Methods, data, results and reproduction notes
 │   └── figures/                    Scientific SVG figures generated from saved data
 ├── THIRD_PARTY.md                  Dataset attribution and redistribution notes
-└── .github/workflows/verify.yml     Automated tests and saved-result verification
+└── .github/workflows/verify.yml     Automated code tests; optional data checks
 ```
 
 No trained model pickle is required. Each experiment fits transparent scikit-learn pipelines from the restored texts. The large remote archive, download caches, document-writing tools and assignment reports are outside this code repository.

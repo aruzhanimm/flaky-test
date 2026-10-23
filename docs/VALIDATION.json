@@ -1,0 +1,46 @@
+{
+  "checked_utc": "2026-10-23T14:04:31.321446+00:00",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "macOS-26.2-arm64-arm-64bit",
+    "sklearn": "1.9.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "unit_tests": {
+    "passed": 24,
+    "failures": 0,
+    "errors": 0,
+    "masking_records_checked": 1051
+  },
+  "artifact_files_verified": 95,
+  "reference_arithmetic_checks": {
+    "main_and_repeat": "passed",
+    "three_label": "passed",
+    "extension_12_conditions": "passed"
+  },
+  "new_main_execution": {
+    "run": "repository_check",
+    "tests": 1051,
+    "project_groups": 127,
+    "fits": 254,
+    "seconds": 75.74284604098648,
+    "predictions_match_reference": true,
+    "metric_values_match_reference": true,
+    "vocabulary_hashes_match_reference": true,
+    "coefficient_hashes_matching_reference": 0,
+    "note": "All predictions and scores match. Coefficient bytes differ across Windows and macOS numerical environments."
+  },
+  "single_fold_demo": "passed: original ID, masked TD",
+  "figures": "3 SVG figures generated from saved numeric artifacts and visually inspected",
+  "scope": "Local checks; this file does not assert a GitHub Actions run has passed.",
+  "new_extension_execution": {
+    "conditions": 12,
+    "tests": 1051,
+    "project_groups": 127,
+    "seconds": 427.23504983398016,
+    "pooled_scores_match_reference": true,
+    "independent_validator": "passed"
+  },
+  "publication_scope": "Code, aggregate results and figures only. Full local checks used separately held research data; the archive is excluded from the public branch."
+}

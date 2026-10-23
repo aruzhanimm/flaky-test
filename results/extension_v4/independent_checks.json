@@ -1,0 +1,15 @@
+{
+  "tests": 1051,
+  "project_groups": 127,
+  "conditions_checked": 12,
+  "all_metrics_recomputed_without_sklearn": true,
+  "all_splits_and_labels_match_corpus": true,
+  "each_sample_evaluated_once": true,
+  "main_pair_exactly_reproduced": true,
+  "all_56_cases_traced_to_corpus": true,
+  "all_margin_decompositions_verified": true,
+  "surefire_metrics_and_splits_checked": true,
+  "corpus_hash_unchanged": true,
+  "test_only_equals_full_predictions": true,
+  "path_only_equals_original_predictions": true
+}

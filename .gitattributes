@@ -1,0 +1,6 @@
+* text=auto
+config_model_v3.json -text
+protocol_v3_RU.txt -text
+protocol_extension_v4_RU.txt -text
+results/**/*.json -text
+artifacts/*.xz binary

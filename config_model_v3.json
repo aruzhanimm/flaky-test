@@ -1,0 +1,40 @@
+{
+  "protocol": "protocol_v3_RU.txt",
+  "seed": 20261013,
+  "primary_labels": [
+    "ID",
+    "NIO",
+    "OD",
+    "TD"
+  ],
+  "sensitivity_labels": [
+    "ID",
+    "OD",
+    "TD"
+  ],
+  "minimum_project_groups_per_class": 3,
+  "cv": "LeaveOneGroupOut",
+  "vectorizer": {
+    "lowercase": true,
+    "ngram_range": [
+      1,
+      2
+    ],
+    "token_pattern": "(?u)\\b\\w\\w+\\b",
+    "min_df": 1,
+    "max_features": 30000,
+    "sublinear_tf": true,
+    "norm": "l2"
+  },
+  "classifier": {
+    "C": 1.0,
+    "solver": "lbfgs",
+    "max_iter": 2000,
+    "class_weight": "balanced",
+    "random_state": 20261013
+  },
+  "bootstrap_resamples": 5000,
+  "zero_division": 0,
+  "test_unit": "one representative confirmed target failure per canonical test",
+  "status": "Frozen before final modelling; numerical hyperparameters unchanged from pre-pilot config v1"
+}

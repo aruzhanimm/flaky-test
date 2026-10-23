@@ -1,0 +1,8 @@
+{
+  "run": "main_v3_three_labels",
+  "tests": 930,
+  "project_groups": 127,
+  "metrics_recalculated_without_sklearn": true,
+  "all_saved_splits_disjoint": true,
+  "all_samples_evaluated_once": true
+}
